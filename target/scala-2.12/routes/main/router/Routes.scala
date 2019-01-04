@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
 // @SOURCE:C:/Users/JackEastman/Documents/GuessThatPet/GuessThatPetWorkspace/guessthatpet/conf/routes
-// @DATE:Thu Jan 03 17:03:40 CST 2019
+// @DATE:Fri Jan 04 16:01:42 CST 2019
 
 package router
 

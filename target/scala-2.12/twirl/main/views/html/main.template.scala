@@ -68,7 +68,7 @@ Seq[Any](format.raw/*7.32*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Jan 03 16:56:56 CST 2019
+                  DATE: Fri Jan 04 16:01:42 CST 2019
                   SOURCE: C:/Users/JackEastman/Documents/GuessThatPet/GuessThatPetWorkspace/guessthatpet/app/views/main.scala.html
                   HASH: 1c6ff78675beee071e369b305cd8e888a02716d8
                   MATRIX: 1211->266|1336->296|1366->300|1449->408|1486->418|1521->426|1547->431|1637->494|1652->500|1715->541|1804->603|1819->609|1880->648|1945->776|1983->787|2011->794|2050->806|2091->820|2106->826|2167->866
