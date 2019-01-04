@@ -1,1 +1,1 @@
-web: sh target/bin/webapp
+web: target/start -Dhttp.port=$PORT \
