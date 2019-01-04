@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/GuessThatPet -Dhttp.port=${PORT}
+web: build.sbt -Dhttp.port=${PORT}
