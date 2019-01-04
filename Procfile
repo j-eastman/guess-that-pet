@@ -1,1 +1,1 @@
-web: target/universal/stage/bin/guess-that-pet -Dhttp.port=${PORT} -Dconfig.file=conf/application.conf
+web: sh target/bin/webapp
