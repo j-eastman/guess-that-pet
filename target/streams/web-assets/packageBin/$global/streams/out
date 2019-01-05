@@ -1,15 +1,1 @@
-[0m[[0m[0minfo[0m] [0m[0mPackaging C:\Users\JackEastman\Documents\GuessThatPet\GuessThatPetWorkspace\guessthatpet\target\scala-2.12\guessthatpet_2.12-1.0-SNAPSHOT-web-assets.jar ...[0m
-[0m[[0m[0mdebug[0m] [0m[0mInput file mappings:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	public/stylesheets[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\JackEastman\Documents\GuessThatPet\GuessThatPetWorkspace\guessthatpet\public\stylesheets[0m
-[0m[[0m[0mdebug[0m] [0m[0m	public/images[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\JackEastman\Documents\GuessThatPet\GuessThatPetWorkspace\guessthatpet\public\images[0m
-[0m[[0m[0mdebug[0m] [0m[0m	public/javascripts\main.js[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\JackEastman\Documents\GuessThatPet\GuessThatPetWorkspace\guessthatpet\public\javascripts\main.js[0m
-[0m[[0m[0mdebug[0m] [0m[0m	public/images\favicon.png[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\JackEastman\Documents\GuessThatPet\GuessThatPetWorkspace\guessthatpet\public\images\favicon.png[0m
-[0m[[0m[0mdebug[0m] [0m[0m	public/stylesheets\main.css[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\JackEastman\Documents\GuessThatPet\GuessThatPetWorkspace\guessthatpet\public\stylesheets\main.css[0m
-[0m[[0m[0mdebug[0m] [0m[0m	public/javascripts[0m
-[0m[[0m[0mdebug[0m] [0m[0m	  C:\Users\JackEastman\Documents\GuessThatPet\GuessThatPetWorkspace\guessthatpet\public\javascripts[0m
-[0m[[0m[0minfo[0m] [0m[0mDone packaging.[0m
+[0m[[0m[0mdebug[0m] [0m[0mJar uptodate: C:\Users\JackEastman\Documents\GuessThatPet\GuessThatPetWorkspace\guessthatpet\target\scala-2.12\guessthatpet_2.12-1.0-SNAPSHOT-web-assets.jar[0m
