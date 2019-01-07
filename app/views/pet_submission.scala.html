@@ -1,0 +1,17 @@
+@()
+
+@main("Pet Submission") {  
+	@helper.form(action = routes.PetSubmissionController.upload, 'enctype -> "multipart/form-data") {
+		<input type="text" name="petname" placeholder="Pet's Name" required=true><select name="pettype" required=true><option value="dog">Dog</option><option value="cat">Cat</option><option value="Other">Other</option></select>
+		<input type="text" name="hint" placeholder="Name Hint" required=false>
+		<input type="email" name="email" placeholder="Email" required=false>
+    	<input type="file" name="picture">   
+    	<p>
+			<input type="checkbox" required=true> By checking this box you agree that your submission may be featued on the app “Guess That Pet” as well as its derivatives and may be visible to all users of the product.<br>
+			<input type="checkbox" required=true> I've read and accept the <a href="/terms" target="_blank">Terms and Conditions</a>.<br>
+			<input type="checkbox" required=true> I am at least 13 years of age.<br>
+        	<input type="submit">
+    	</p>    
+	}
+
+}
