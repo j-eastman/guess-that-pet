@@ -13,12 +13,29 @@
         <title>@title</title>
         <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("stylesheets/main.css")">
         <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+		<link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("html/css/chatterer.css")">
+		<link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("html/css/lyric_entry.css")">
+		<link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("html/css/GuessThatPet.css")">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="https://cdn.kik.com/kik/2.0.5/kik.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         @* And here's where we render the `Html` object containing
          * the page content. *@
         @content
-
+		<aside class='topNav nav-blue' id='topNav'>
+			<div class='container navBar'>
+				<a href=\"/\"> <img src="@routes.Assets.versioned("/assets/mdpi/Logo@1x.png")" width=\"64px\" height=\"64px\"></a>
+				<a href=\"/\"><h2> Home </h2></a> 
+				<a href=\"/about\"><h2> About </h2></a> 
+				<a href=\"/submit\"><h2> Submit Your Pet </h2></a>
+				<a href=\"/contact\"><h2> Contact </h2></a> 
+			</div>											
+		</aside>
         <script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>
     </body>
 </html>
