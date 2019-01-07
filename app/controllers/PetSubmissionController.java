@@ -13,6 +13,7 @@ public class PetSubmissionController extends Controller {
 	}
 
 	public Result upload() {
+		System.out.println("Body:" + request().body().asText());
 		Http.MultipartFormData<File> body = request().body().asMultipartFormData();
 		Http.MultipartFormData.FilePart<File> picture = body.getFile("picture");
 		Http.MultipartFormData.FilePart<File> petname = body.getFile("petname");
