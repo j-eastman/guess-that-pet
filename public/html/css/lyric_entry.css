@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color: #34CFFF;
+}
+.lyric_entry{
+	background-color: #34CFFF;
+}
+.intro{
+	text-align:center;
+}.intro h2{
+	color:#0003B1;
+}.intro p{
+	color:#0003B1;
+}
+.metadata {
+	margin-left:3%;
+	margin-right:3%;
+}.metadata #song_title{
+	width:50%;
+	display:inline-block;
+	float:left;
+}.metadata #artist_name{
+	width:45%;
+	display:inline-block;
+	float:left;
+}.metadata #song_id{
+	width:5%;
+	display:inline-block;
+	float:left;
+}.metadata #username{
+	width:100%;
+	clear:both;
+}
+.input{
+	margin-left:3%;
+	margin-right:3%;
+}
