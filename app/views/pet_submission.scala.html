@@ -1,5 +1,4 @@
-@import helper._
-@()
+@(form: Form[UserSubmissionForm])
 
 @main("Pet Submission") {  
 	@helper.form(action = routes.PetSubmissionController.upload(), 'enctype -> "multipart/form-data") {
