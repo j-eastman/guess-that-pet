@@ -32,7 +32,7 @@ public class PetSubmissionController extends Controller {
 	}
 	
 	public Result index() {
-		return ok(views.html.pet_submission.render());
+		return ok(views.html.pet_submission.render(form));
 	}
 
 	@SuppressWarnings("deprecation")
