@@ -17,17 +17,16 @@ import play.mvc.Result;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static play.libs.Scala.asScala;
 @Singleton
 public class PetSubmissionController extends Controller {
 	private final Form<UserSubmissionForm> form;
-	private final List<String> test;
+	//private final List<String> test;
 	
 	
 	@Inject
 	public PetSubmissionController(FormFactory formFactory){
 		this.form = formFactory.form(UserSubmissionForm.class);
-		test = com.google.common.collect.Lists.newArrayList("this","is","the","list");
+		//test = com.google.common.collect.Lists.newArrayList("this","is","the","list");
 		
 		
 	}
@@ -36,12 +35,13 @@ public class PetSubmissionController extends Controller {
 		return ok(views.html.pet_submission.render());
 	}
 
+	@SuppressWarnings("deprecation")
 	public Result upload() {
 		final Form<UserSubmissionForm> boundForm = form.bindFromRequest();
 		if (boundForm.hasErrors()){
 			play.Logger.ALogger logger = play.Logger.of(getClass());		
 			logger.error("errors = {}",boundForm.errors());	
-			return badRequest(views.html.pet_submission.render(asScala(test),boundForm));
+			return badRequest("error");
 		} else {
 			UserSubmissionForm user = boundForm.get();
 			System.out.println(user.toString());
