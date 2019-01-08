@@ -1,15 +1,44 @@
 @()
 
 @main("Pet Submission") {  
-	@helper.form(action = routes.PetSubmissionController.upload, 'enctype -> "multipart/form-data") {
-		<input type="text" name="petname" placeholder="Pet's Name" required=true><select name="pettype" required=true><option value="dog">Dog</option><option value="cat">Cat</option><option value="Other">Other</option></select><br>
-		<input type="text" name="hint" placeholder="Name Hint" required=false><br>
-		<input type="email" name="email" placeholder="Email" required=false>
-    	<input type="file" name="picture">   
+	@helper.form(action = routes.PetSubmissionController.upload(), 'enctype -> "multipart/form-data") {
+		<div class="input-labels">Your Pet's Name</div>
+		@helper.input(form("petname")) { (id, name, value, args) =>
+    		<input type="text" name="@name" id="@id" placeholder-"Pet's Name" required=true @toHtmlArgs(args)>
+		}
+
+		<div class="input-labels">Your Pet's Species</div>
+		@helper.input(form("pettype")) { (id, name, value, args) =>
+    		<select name="@name" id="@id" required=true @toHtmlArgs(args)><option value="dog" @toHtmlArgs(args)>Dog</option><option value="cat" @toHtmlArgs(args)>Cat</option><option value="Other" @toHtmlArgs(args)>Other</option></select>
+		}
+		<br>
+
+		<div class="input-labels">A hint for your pet's name (Optional)</div>
+		@helper.input(form("hint")) { (id, name, value, args) =>
+    		<input type="text" name="hint" placeholder="Name Hint" required=false @toHtmlArgs(args)>
+		}
+
+		<div class="input-labels">Email you would like to receive confirmation on if your pet is chosen.</div>
+		@helper.input(form("email")) { (id, name, value, args) =>
+    		<input type="email" name="email" placeholder="Email" required=false @toHtmlArgs(args)>
+		}
+		@helper.input(form("file")) {
+			<input type="file" name="picture" @toHtmlArgs(args)>
+		}
     	<p>
-			<input type="checkbox" required=true> By checking this box you agree that your submission may be featued on the app “Guess That Pet” as well as its derivatives and may be visible to all users of the product.<br>
-			<input type="checkbox" required=true> I've read and accept the <a href="/terms" target="_blank">Terms and Conditions</a>.<br>
-			<input type="checkbox" required=true> I am at least 13 years of age.<br>
+			
+			@helper.input(form("usageconsent")) { (id, name, value, args) =>
+				<input type="checkbox" required=true @toHtmlArgs(args)> By checking this box you agree that your submission may be featured on the app “Guess That Pet” as well as its derivatives and may be visible to all users of the product.<br>
+			}
+			@helper.input(form("termsconsent")) { (id, name, value, args) =>
+				<input type="checkbox" required=true @toHtmlArgs(args)> I've read and accept the <a href="/terms" target="_blank">Terms and Conditions</a>.<br>
+			}
+			@helper.input(form("ageconsent")) { (id, name, value, args) =>
+				<input type="checkbox" required=true @toHtmlArgs(args)> I am at least 13 years of age.<br>			
+			}
+			@helper.input(form("receiveupdates")) { (id, name, value, args) =>
+				<input type="checkbox" required=false @toHtmlArgs(args)> I would like to receive updates and announcements about GuessThatPet on my provided email.<br>			
+			}
         	<input type="submit">
     	</p>    
 	}
