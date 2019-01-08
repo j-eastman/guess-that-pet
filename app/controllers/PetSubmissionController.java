@@ -19,7 +19,6 @@ import views.formdata.UserSubmissionForm;
 @Singleton
 public class PetSubmissionController extends Controller {
 	private final Form<UserSubmissionForm> form;
-	//private final List<String> test;
 	
 	
 	@Inject
