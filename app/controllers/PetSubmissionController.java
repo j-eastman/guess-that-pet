@@ -6,7 +6,7 @@ import java.util.List;
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
-import forms.UserSubmissionForm;
+import models.UserSubmission;
 import play.data.Form;
 import play.data.FormFactory;
 import play.mvc.Controller;
@@ -14,18 +14,17 @@ import play.mvc.Http;
 import play.mvc.Http.RawBuffer;
 import play.mvc.Http.RequestBody;
 import play.mvc.Result;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import views.formdata.UserSubmissionForm;
 
 @Singleton
 public class PetSubmissionController extends Controller {
 	private final Form<UserSubmissionForm> form;
-	//private final List<String> test;
 	
 	
 	@Inject
 	public PetSubmissionController(FormFactory formFactory){
-		this.form = formFactory.form(UserSubmissionForm.class);
+		UserSubmissionForm userData = new UserSubmissionForm();
+		this.form = formFactory.form(UserSubmissionForm.class).fill(userData);
 		//test = com.google.common.collect.Lists.newArrayList("this","is","the","list");
 		
 		
@@ -39,13 +38,14 @@ public class PetSubmissionController extends Controller {
 	public Result upload() {
 		final Form<UserSubmissionForm> boundForm = form.bindFromRequest();
 		if (boundForm.hasErrors()){
-			play.Logger.ALogger logger = play.Logger.of(getClass());		
-			logger.error("errors = {}",boundForm.errors());	
-			return badRequest("error");
+			flash("Error","Please correct errors above.");
+			return badRequest(views.html.pet_submission.render(form));
 		} else {
+			UserSubmission userSubmission = UserSubmission.makeInstance(boundForm.get());
 			UserSubmissionForm user = boundForm.get();
+			flash("success","User Submission: " + user);
 			System.out.println(user.toString());
-			return ok(user.toString());
+			return ok(views.html.pet_submission.render(boundForm));
 		}
 		/**System.out.println("Body:" + request().body().asText());
 		Http.MultipartFormData<File> body = request().body().asMultipartFormData();
