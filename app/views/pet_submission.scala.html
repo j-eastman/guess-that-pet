@@ -22,8 +22,8 @@
 		@helper.input(form("email")) { (id, name, value, args) =>
     		<input type="email" name="email" placeholder="Email" required=false @toHtmlArgs(args)>
 		}
-		@helper.input(form("file")) {
-			<input type="file" name="picture">
+		@helper.input(form("file")) { (id, name, value, args) =>
+			<input type="file" name="picture" @toHtmlArgs(args)>
 		}
     	<p>
 			
