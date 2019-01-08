@@ -1,3 +1,4 @@
+@import helper._
 @()
 
 @main("Pet Submission") {  
@@ -23,7 +24,7 @@
     		<input type="email" name="email" placeholder="Email" required=false @toHtmlArgs(args)>
 		}
 		@helper.input(form("file")) {
-			<input type="file" name="picture" @toHtmlArgs(args)>
+			<input type="file" name="picture">
 		}
     	<p>
 			
