@@ -36,8 +36,15 @@
 		</aside>
 		
         @content
-										
-		
+		<script src="http://code.jquery.com/jquery.min.js"></script>
+    	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+    	<!-- Enable tooltips. Used primarily to validate that JQuery + Bootstrap JS are loaded. Remove this script if you don't want tooltips. -->
+    	<script type="text/javascript">
+    		jQuery(function ($) {
+        		$("[rel='tooltip']").tooltip()
+    		});
+    	</script>
         <script src="@routes.Assets.versioned("javascripts/main.js")" type="text/javascript"></script>
     </body>
 </html>

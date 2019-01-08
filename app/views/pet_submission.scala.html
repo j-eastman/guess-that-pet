@@ -1,8 +1,32 @@
-@(form: Form[UserSubmissionForm])
+@(form: Form[views.formdata.UserSubmissionForm])
+@import helper._
 
 @main("Pet Submission") {  
-	@helper.form(action = routes.PetSubmissionController.upload(), 'enctype -> "multipart/form-data") {
-		<div class="input-labels">Your Pet's Name</div>
+	<!--@form(action = routes.PetSubmissionController.upload(), 'enctype -> "multipart/form-data") { -->
+ 	
+	<div class="container">
+  		<div class="well">
+			@form(action = routes.PetSubmissionController.upload(), 'enctype -> "multipart/form-data", 'class -> "form-horizontal") {
+     			@fieldset(form)
+    		}
+  		</div>
+
+  		@if(flash.containsKey("success")) {
+  			<div class="well">
+    			<div id="success-message" class="text-success">
+      				@flash.get("success")
+    			</div>
+  			</div>
+  		}
+  		@if(flash.containsKey("error")) {
+  			<div class="well">
+    			<div id="error-message" class="text-danger">
+      				@flash.get("error")
+  				</div>
+    		</div>
+  		}
+	</div>
+	<!--	<div class="input-labels">Your Pet's Name</div>
 		@helper.input(form("petname")) { (id, name, value, args) =>
     		<input type="text" name="@name" id="@id" placeholder-"Pet's Name" required=true @toHtmlArgs(args)>
 		}
@@ -40,7 +64,5 @@
 				<input type="checkbox" required=false @toHtmlArgs(args)> I would like to receive updates and announcements about GuessThatPet on my provided email.<br>			
 			}
         	<input type="submit">
-    	</p>    
+    	</p>    -->
 	}
-
-}
